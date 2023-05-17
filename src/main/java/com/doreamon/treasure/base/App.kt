@@ -47,7 +47,7 @@ internal class App : Application() {
             }
         }
 
-        println("测试提交测试提交测试提交测试提交测试提交测试提交测试提交")
+        println("lib_common又改变啦")
     }
 
 
