@@ -5,5 +5,5 @@ package com.doreamon.treasure.utils
  * @date 2023/5/17
  */
 fun getVersion(): String {
-    return "1.1.1"
+    return "1.1.2"
 }
