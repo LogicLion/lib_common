@@ -47,7 +47,6 @@ internal class App : Application() {
             }
         }
 
-        println("lib_common又改变啦")
     }
 
 
