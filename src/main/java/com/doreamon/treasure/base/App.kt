@@ -46,6 +46,8 @@ internal class App : Application() {
                 delegate.onCreate(this)
             }
         }
+
+        println("测试提交")
     }
 
 
