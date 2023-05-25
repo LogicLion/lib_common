@@ -8,7 +8,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        minSdk 21
+        minSdk 23
         targetSdk 32
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -106,9 +106,9 @@ dependencies {
 
     api 'com.binioter:guideview:1.0.0'
 
-    api 'com.isanwenyu.highlight:highlight:1.8.0'
-
-    api 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+//    api 'com.isanwenyu.highlight:highlight:1.8.0'
+//
+//    api 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
 
 
     api 'com.alibaba:arouter-api:1.5.2'
