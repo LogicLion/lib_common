@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.pm.PackageManager.GET_META_DATA
 import com.alibaba.android.arouter.launcher.ARouter
+import com.didichuxing.doraemonkit.DoKit
 import com.doreamon.treasure.BuildConfig
 import com.doreamon.treasure.utils.AppManager
 
@@ -46,6 +47,10 @@ internal class App : Application() {
                 delegate.onCreate(this)
             }
         }
+
+        DoKit.Builder(this)
+//            .productId("需要使用平台功能的话，需要到dokit.cn平台申请id")
+            .build()
 
     }
 

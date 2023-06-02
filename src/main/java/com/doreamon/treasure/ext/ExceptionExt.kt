@@ -1,7 +1,7 @@
 //package com.example.doreamon.net
 //
 //import android.util.Log
-//import com.doreamon.treasure.base.BaseActivity
+//import com.wanandroid.module_base.base.BaseActivity
 //import com.doreamon.treasure.entity.AlertDialogModel
 //import com.doreamon.treasure.entity.BusinessException
 //import com.doreamon.treasure.utils.AppManager
