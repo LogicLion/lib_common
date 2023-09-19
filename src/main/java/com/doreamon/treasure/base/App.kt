@@ -7,6 +7,9 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.didichuxing.doraemonkit.DoKit
 import com.doreamon.treasure.BuildConfig
 import com.doreamon.treasure.utils.AppManager
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 
 /**
  * @author wzh
@@ -26,7 +29,7 @@ internal class App : Application() {
 
         if (delegates.isNotEmpty()) {
             for (delegate in delegates) {
-                delegate.attachBaseContext(this,base)
+                delegate.attachBaseContext(this, base)
             }
         }
     }
@@ -41,6 +44,11 @@ internal class App : Application() {
             ARouter.openLog()
         }
         ARouter.init(this)
+
+        startKoin {
+            androidLogger()
+            androidContext(this@App)
+        }
 
         if (delegates.isNotEmpty()) {
             for (delegate in delegates) {
@@ -77,7 +85,7 @@ internal class App : Application() {
 
     private fun initApplicationDelegate(className: String): ApplicationDelegate {
         val clazz: Class<*>
-        val instance:Any
+        val instance: Any
         try {
             clazz = Class.forName(className)
         } catch (e: ClassNotFoundException) {
@@ -88,7 +96,7 @@ internal class App : Application() {
         try {
             instance = clazz.newInstance()
         } catch (e: Exception) {
-            throw RuntimeException("不能获取${className}的实例",e)
+            throw RuntimeException("不能获取${className}的实例", e)
         }
 
         if (instance !is ApplicationDelegate) {
