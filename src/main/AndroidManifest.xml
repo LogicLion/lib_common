@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.doreamon.treasure">
 
-    <application android:name=".base.App"/>
+    <!--usesCleartextTraffic android9.0以上默认禁止明文HTTP,如需使用,需声明为true-->
+    <application
+        android:name=".base.App"
+        android:usesCleartextTraffic="true" />
 
 
 </manifest>

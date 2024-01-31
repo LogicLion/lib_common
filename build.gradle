@@ -19,6 +19,11 @@ android {
             }
         }
 
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
     }
 
     buildTypes {
@@ -127,7 +132,14 @@ dependencies {
     api 'com.orhanobut:logger:2.2.0'
 
 
+    //dokit调试工具
     debugImplementation "io.github.didi.dokit:dokitx:3.5.0"
+
+
+    //bugly
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如4.0.3
+    implementation 'com.tencent.bugly:crashreport:4.1.9.2'
+
 
 
 }
