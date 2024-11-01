@@ -3,16 +3,15 @@ package com.doreamon.treasure.base
 import android.app.Application
 import android.content.Context
 import android.content.pm.PackageManager.GET_META_DATA
-import androidx.lifecycle.lifecycleScope
 import com.alibaba.android.arouter.launcher.ARouter
 import com.didichuxing.doraemonkit.DoKit
 import com.doreamon.treasure.BuildConfig
 import com.doreamon.treasure.utils.AppManager
 import com.tencent.bugly.crashreport.CrashReport
-import kotlinx.coroutines.delay
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+
 
 /**
  * @author wzh
@@ -67,7 +66,37 @@ internal class App : Application() {
         CrashReport.initCrashReport(this, "31a286166b", true)
 
 
+        //matrix初始化
+//        initMatrix()
     }
+
+
+//    private fun initMatrix() {
+//        val builder: Matrix.Builder = Matrix.Builder(this) // build matrix
+//
+//        builder.pluginListener(
+//            TestPluginListener(
+//                this
+//            )
+//        )// add general pluginListener
+//
+//        val dynamicConfig = DynamicConfigImplDemo() // dynamic config
+//
+//        // init plugin
+//        val ioCanaryPlugin = IOCanaryPlugin(
+//            IOConfig.Builder()
+//                .dynamicConfig(dynamicConfig)
+//                .build()
+//        )
+//        //add to matrix
+//        builder.plugin(ioCanaryPlugin)
+//
+//        //init matrix
+//        Matrix.init(builder.build())
+//
+//        // start plugin
+//        ioCanaryPlugin.start()
+//    }
 
 
     private fun findApplicationDelegate(): List<ApplicationDelegate> {
