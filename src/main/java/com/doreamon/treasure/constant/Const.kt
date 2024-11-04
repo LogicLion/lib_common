@@ -32,6 +32,6 @@ val PERMISSIONS_LIST_OTHER = arrayOf(
 ) //权限集合
 
 
-val TEXT_TEST = "子模块测试提交 主分支 测试提交5"
+val TEXT_TEST = "子模块测试提交 主分支 测试提交6"
 
 
