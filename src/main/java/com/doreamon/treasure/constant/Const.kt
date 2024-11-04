@@ -20,7 +20,7 @@ const val WX_APP_SECRET = "5a31e0e0a4d01dfbc67bf63596887532"
 const val UMENG_APPKEY = "61de2cf6e0f9bb492bc8647b"
 
 /** 域名 */
-var BASE_URL ="https://www.wanandroid.com"
+var BASE_URL = "https://www.wanandroid.com"
 
 //权限
 val PERMISSIONS_LIST_OTHER = arrayOf(
@@ -30,5 +30,8 @@ val PERMISSIONS_LIST_OTHER = arrayOf(
     Manifest.permission.MODIFY_AUDIO_SETTINGS,
     Manifest.permission.READ_PHONE_STATE
 ) //权限集合
+
+
+val TEXT_TEST = "子模块测试提交"
 
 
